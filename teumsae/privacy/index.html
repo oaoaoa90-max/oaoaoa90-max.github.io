@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="틈새오락실 앱의 개인정보처리방침">
+<title>틈새오락실 개인정보처리방침</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: single reading column (~68ch) with the app's coin-slot mark; tables scroll inside their own box on phones. */
+:root {
+  --bg: #f6f5fb;
+  --surface: #ffffff;
+  --ink: #1d1840;
+  --ink-dim: #4d4772;
+  --line: #e2dff0;
+  --accent: #b05f1c;
+  --coin: #ffb45e;
+  --display: "Black Han Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #17132e; --surface: #211b40; --ink: #fff4e8; --ink-dim: #c9c2e0; --line: #353058; --accent: #ffb45e; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #17132e; --surface: #211b40; --ink: #fff4e8; --ink-dim: #c9c2e0; --line: #353058; --accent: #ffb45e; color-scheme: dark; }
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.75; }
+.page { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+header { display: flex; flex-direction: column; gap: 10px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 20px; }
+.slot { width: 18px; height: 25px; border: 2.5px solid var(--coin); border-radius: 6px; position: relative; flex: none; }
+.slot::after { content: ""; position: absolute; left: 50%; top: 4px; bottom: 4px; width: 3px; transform: translateX(-50%); background: var(--coin); border-radius: 2px; }
+h1 { margin: 6px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(30px, 7vw, 40px); line-height: 1.2; text-wrap: balance; }
+.meta { color: var(--ink-dim); font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.lang { font-size: 14px; }
+h2 { margin: 44px 0 10px; font-size: 20px; font-weight: 700; line-height: 1.4; text-wrap: balance; }
+h3 { margin: 24px 0 6px; font-size: 16px; font-weight: 700; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); text-underline-offset: 3px; word-break: break-all; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lead { font-size: 17px; }
+.note { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; font-size: 15px; }
+.table-wrap { overflow-x: auto; margin: 12px 0 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; line-height: 1.6; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font-weight: 700; color: var(--ink-dim); font-size: 13px; letter-spacing: .02em; }
+tr:last-child td { border-bottom: 0; }
+.contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.contact dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; min-width: 0; }
+.contact dt { color: var(--ink-dim); font-size: 14px; }
+.contact dd { margin: 0; font-weight: 500; user-select: all; min-width: 0; word-break: break-all; }
+.copy { margin-left: auto; font: inherit; font-size: 14px; font-weight: 700; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 56px 0 0; }
+footer { margin-top: 40px; color: var(--ink-dim); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="brand"><span class="slot" aria-hidden="true"></span>틈새오락실</div>
+    <h1>개인정보처리방침</h1>
+    <div class="meta"><span>시행일 2026년 10월 13일</span><span>운영자 틈새오락실 개발팀</span></div>
+    <a class="lang" href="#en">English version</a>
+  </header>
+
+  <main>
+    <p class="lead" style="margin-top:28px">틈새오락실 개발팀(이하 "운영자")은 Android 앱 「틈새오락실」(이하 "앱")을 이용하는 분의 개인정보를 「개인정보 보호법」 등 관련 법령에 따라 처리합니다. 이 방침은 앱이 어떤 정보를 어디에 저장하고, 어떤 외부 서비스를 쓰는지 설명합니다.</p>
+
+    <div class="note">요약하면, 운영자는 별도의 서버를 두지 않고 이용자의 이름·연락처·계정 정보를 직접 받지 않습니다. 게임 기록은 휴대폰 안에만 저장됩니다. 광고(Google AdMob)와 랭킹(Google Play 게임즈 서비스)은 Google이 처리합니다.</div>
+
+    <h2>1. 앱이 기기에 저장하는 정보</h2>
+    <p>게임 최고 기록, 코인, 오늘의 미션 진행 상황, 연속 출석 일수, 블록 테마와 랜드마크 도감, 소리 설정은 이용자의 기기 안에만 저장되며 운영자에게 전송되지 않습니다. 앱을 삭제하거나 기기 설정에서 앱 데이터를 지우면 함께 삭제됩니다.</p>
+
+    <h2>2. 외부 서비스가 처리하는 정보</h2>
+    <p>앱은 아래 Google 서비스를 사용합니다. 이 정보는 운영자가 아니라 Google LLC가 수집·처리하며, <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 따릅니다.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>서비스</th><th>처리하는 정보</th><th>목적</th></tr></thead>
+        <tbody>
+          <tr><td>Google AdMob<br>(광고)</td><td>광고 ID, 기기 정보(모델, 운영체제 버전, 언어), IP 주소, IP 기반의 대략적인 위치, 광고 조회·클릭 기록, 앱 이용 정보</td><td>광고 표시, 광고 성과 측정, 부정 클릭 방지, 이용자가 허용한 경우 맞춤형 광고</td></tr>
+          <tr><td>Google Play 게임즈 서비스<br>(로그인·랭킹)</td><td>Play 게임즈 프로필(닉네임, 프로필 이미지, 플레이어 ID), 게임 점수</td><td>자동 로그인, 게임별 리더보드(일간·주간·전체 순위) 제공</td></tr>
+          <tr><td>Google User Messaging Platform<br>(광고 동의)</td><td>동의 여부와 선택 내용</td><td>유럽경제지역·영국·스위스 등에서 광고 동의 관리</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Google이 파트너 앱의 정보를 어떻게 쓰는지는 <a href="https://policies.google.com/technologies/partner-sites">Google 파트너 사이트·앱 데이터 이용 안내</a>에서 볼 수 있습니다.</p>
+
+    <h3>개인정보의 국외 이전</h3>
+    <ul>
+      <li>이전받는 자: Google LLC (미국), 연락처 <a href="https://support.google.com/policies/contact/general_privacy_form">Google 개인정보 문의</a></li>
+      <li>이전 항목: 위 표의 정보</li>
+      <li>이전 시기와 방법: 앱을 이용할 때 인터넷을 통해 전송</li>
+      <li>보유 기간: Google의 개인정보처리방침에 따름</li>
+      <li>이전을 원하지 않는 경우: 아래 4번의 방법으로 맞춤형 광고를 끄거나 Play 게임즈 로그인을 하지 않을 수 있습니다. 광고 표시에 필요한 최소한의 정보 전송은 앱 이용에 필요합니다.</li>
+    </ul>
+
+    <h2>3. 보유 기간과 파기</h2>
+    <ul>
+      <li>기기에 저장된 게임 기록: 앱 삭제 또는 앱 데이터 삭제 시 바로 삭제됩니다.</li>
+      <li>Google이 처리하는 정보: Google의 보유 정책에 따릅니다.</li>
+      <li>랭킹 기록과 Play 게임즈 데이터: Play 게임즈 앱의 설정에서 이 게임의 데이터를 삭제할 수 있습니다.</li>
+    </ul>
+
+    <h2>4. 이용자의 선택과 권리</h2>
+    <ul>
+      <li>맞춤형 광고 끄기: 기기의 <b>설정 → Google → 광고</b>에서 광고 ID를 삭제하거나 재설정할 수 있습니다.</li>
+      <li>유럽경제지역·영국·스위스 이용자는 앱을 처음 실행할 때 표시되는 동의 창에서 광고 동의 여부를 선택할 수 있습니다.</li>
+      <li>Play 게임즈 로그인을 원하지 않으면 로그인 창에서 취소할 수 있으며, 랭킹을 제외한 모든 게임을 그대로 이용할 수 있습니다.</li>
+      <li>개인정보 열람·정정·삭제·처리정지를 요청하거나 궁금한 점이 있으면 아래 연락처로 문의해 주세요. 운영자가 직접 보관하는 개인정보는 없지만, Google에 요청하는 방법을 안내해 드립니다.</li>
+    </ul>
+
+    <h2>5. 아동의 개인정보</h2>
+    <p>앱은 만 14세 미만 아동을 주요 이용 대상으로 하지 않으며, 운영자는 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+
+    <h2>6. 안전성 확보 조치</h2>
+    <p>운영자는 이용자의 개인정보를 서버에 저장하지 않습니다. 앱과 Google 서비스 사이의 통신은 암호화(HTTPS)되어 전송됩니다.</p>
+
+    <h2>7. 개인정보 보호책임자와 문의</h2>
+    <div class="contact">
+      <dl>
+        <dt>보호책임자</dt><dd>틈새오락실 개발팀</dd>
+        <dt>이메일</dt><dd id="email">oaoaoa90@gmail.com</dd>
+      </dl>
+      <button class="copy" type="button" id="copyEmail">이메일 복사</button>
+    </div>
+    <p style="margin-top:16px">개인정보 침해에 대한 상담이나 피해 구제가 필요하면 아래 기관에 문의할 수 있습니다.</p>
+    <ul>
+      <li>개인정보침해신고센터: <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a>, 국번 없이 118</li>
+      <li>개인정보분쟁조정위원회: <a href="https://www.kopico.go.kr">www.kopico.go.kr</a>, 1833-6972</li>
+      <li>대검찰청 사이버수사과: <a href="https://www.spo.go.kr">www.spo.go.kr</a>, 국번 없이 1301</li>
+      <li>경찰청 사이버수사국: <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a>, 국번 없이 182</li>
+    </ul>
+
+    <h2>8. 방침의 변경</h2>
+    <p>이 방침을 바꾸는 경우 시행일 7일 전에 이 페이지에 변경 내용과 시행일을 게시합니다.</p>
+
+    <hr id="en">
+    <h2 style="margin-top:32px">Privacy Policy (English)</h2>
+    <p class="meta" style="display:block">Effective October 13, 2026 · Operated by the Teumsae Arcade team</p>
+    <p>This policy covers the Android app "틈새오락실 (Teumsae Arcade)". The operator runs no server and does not directly collect your name, contact details or account information.</p>
+    <h3>Data stored on your device</h3>
+    <p>High scores, coins, daily mission progress, streaks, block themes, the landmark collection and sound settings are stored only on your device and are never sent to the operator. Uninstalling the app or clearing its data deletes them.</p>
+    <h3>Third-party services (Google LLC)</h3>
+    <ul>
+      <li><b>Google AdMob</b> (ads): advertising ID, device information, IP address, approximate location derived from IP, ad views and clicks, app usage. Used to show and measure ads, prevent fraud, and show personalized ads where you allow it.</li>
+      <li><b>Google Play Games Services</b> (sign-in and leaderboards): Play Games profile (nickname, avatar, player ID) and game scores.</li>
+      <li><b>Google User Messaging Platform</b>: your ad consent choices in the EEA, UK and Switzerland.</li>
+    </ul>
+    <p>This data is processed by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. See also <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
+    <h3>Your choices</h3>
+    <ul>
+      <li>Reset or delete your advertising ID in <b>Settings → Google → Ads</b>.</li>
+      <li>Users in the EEA, UK and Switzerland can choose their ad consent in the dialog shown on first launch.</li>
+      <li>You can decline Play Games sign-in; every game except leaderboards still works. Leaderboard data can be deleted in the Play Games app settings.</li>
+    </ul>
+    <h3>Children</h3>
+    <p>The app is not directed at children under 14 (or under 13 where that age applies), and the operator does not knowingly collect their personal information.</p>
+    <h3>Contact</h3>
+    <p>Teumsae Arcade team · oaoaoa90@gmail.com</p>
+    <h3>Changes</h3>
+    <p>Changes will be posted on this page at least 7 days before they take effect.</p>
+  </main>
+
+  <footer>© 2026 틈새오락실 개발팀</footer>
+</div>
+
+<script>
+document.getElementById('copyEmail').addEventListener('click', function () {
+  var btn = this, text = document.getElementById('email').textContent;
+  function done() { btn.textContent = '복사했어요'; setTimeout(function () { btn.textContent = '이메일 복사'; }, 1600); }
+  function fallback() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = '선택했어요. 복사해 주세요';
+  }
+  try {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } catch (e) { fallback(); }
+});
+</script>
+
+</body>
+</html>
