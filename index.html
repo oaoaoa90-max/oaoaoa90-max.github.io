@@ -4,22 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>틈새오락실 개발팀</title>
-<meta name="description" content="짬 날 때 한 판, 미니게임 모음 틈새오락실을 만드는 개발팀">
+<meta name="description" content="미니게임 모음 틈새오락실, 날씨 섬 낚시 게임 나만의 힐링섬을 만드는 개발팀">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
 <style>
-:root { --bg: #17132e; --surface: #211b40; --ink: #fff4e8; --dim: #c9c2e0; --line: #353058; --coin: #ffb45e; color-scheme: dark; }
+:root { --bg: #17132e; --surface: #211b40; --ink: #fff4e8; --dim: #c9c2e0; --line: #353058; --coin: #ffb45e; --sea: #6fd3c8; color-scheme: dark; }
 * { box-sizing: border-box; }
 body { margin: 0; min-height: 100vh; background: radial-gradient(120% 60% at 50% 0%, #2c2160 0%, var(--bg) 60%) fixed, var(--bg); color: var(--ink); font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", sans-serif; line-height: 1.7; }
 main { max-width: 620px; margin: 0 auto; padding: 72px 20px 64px; display: flex; flex-direction: column; gap: 22px; }
 .brand { display: flex; align-items: center; gap: 12px; font-family: "Black Han Sans", sans-serif; font-size: clamp(40px, 11vw, 60px); line-height: 1; }
 .brand em { font-style: normal; color: var(--coin); }
+.brand small { font-family: "IBM Plex Sans KR", sans-serif; font-size: 0.34em; font-weight: 500; color: var(--dim); align-self: flex-end; padding-bottom: 0.2em; }
+.apps { display: flex; flex-direction: column; gap: 14px; }
+.app { padding: 18px 18px 16px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 12px; }
+.app h2 { margin: 0; font-family: "Black Han Sans", sans-serif; font-weight: 400; font-size: 26px; line-height: 1.2; }
+.app h2 em { font-style: normal; color: var(--coin); }
+.app.sea h2 em { color: var(--sea); }
+.app p { font-size: 16px; }
+.app.sea li a span { color: var(--sea); }
+.app.sea li a:hover, .app.sea li a:focus-visible { border-color: var(--sea); }
 .slot { width: 26px; height: 36px; border: 3px solid var(--coin); border-radius: 8px; position: relative; flex: none; }
 .slot::after { content: ""; position: absolute; left: 50%; top: 6px; bottom: 6px; width: 4px; transform: translateX(-50%); background: var(--coin); border-radius: 2px; }
 p { margin: 0; color: var(--dim); font-size: 17px; }
 ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
-li a { display: flex; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-weight: 500; }
+li a { background: var(--bg); display: flex; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-weight: 500; }
 li a:hover, li a:focus-visible { border-color: var(--coin); outline: none; }
 li a span { color: var(--coin); }
 footer { color: var(--dim); font-size: 14px; }
@@ -27,11 +36,24 @@ footer { color: var(--dim); font-size: 14px; }
 </head>
 <body>
 <main>
-  <div class="brand"><span class="slot" aria-hidden="true"></span>틈새<em>오락실</em></div>
-  <p>짬 날 때 한 판. 탑 쌓기, 두더지 잡기, 숫자 합치기 등 미니게임 12종을 한곳에서 즐기는 Android 게임이에요.</p>
-  <ul>
-    <li><a href="teumsae/privacy/">개인정보처리방침 <span>→</span></a></li>
-  </ul>
+  <div class="brand"><span class="slot" aria-hidden="true"></span>틈새<em>오락실</em><small>개발팀</small></div>
+  <p>짬 날 때 가볍게 즐기는 작은 Android 게임을 만들어요.</p>
+  <div class="apps">
+    <section class="app">
+      <h2>틈새<em>오락실</em></h2>
+      <p>짬 날 때 한 판. 탑 쌓기, 두더지 잡기, 숫자 합치기 등 미니게임 12종을 한곳에서 즐기는 게임이에요.</p>
+      <ul>
+        <li><a href="teumsae/privacy/">개인정보처리방침 <span>→</span></a></li>
+      </ul>
+    </section>
+    <section class="app sea">
+      <h2>나만의 <em>힐링섬</em></h2>
+      <p>내가 있는 곳의 진짜 날씨를 따라 바뀌는 작은 섬에서 낚시하고, 물고기를 모으고, 섬을 꾸미는 힐링 게임이에요.</p>
+      <ul>
+        <li><a href="my-healing-island-legal/privacy.html">개인정보처리방침 <span>→</span></a></li>
+      </ul>
+    </section>
+  </div>
   <footer>틈새오락실 개발팀 · oaoaoa90@gmail.com</footer>
 </main>
 </body>
